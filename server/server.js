@@ -34,6 +34,14 @@ app.post('/create-checkout-session', async (req, res) => {
                     quantity: item.quantity
                 }
             }),
+            shipping_options: [
+                {
+                    shipping_rate: 'shr_1NTTmzJWfY4ioR79mawNDGAJ',
+                },
+                {
+                    shipping_rate: 'shr_1NTTmGJWfY4ioR79SBvF4bRC',
+                },
+            ],
             mode: 'payment', // one time payments
             success_url: `http://localhost:3000/success`,
             cancel_url: 'http://localhost:3000/error'
